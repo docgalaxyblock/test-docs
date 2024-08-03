@@ -60,6 +60,19 @@ theme:
 
 # add some plugins
 plugins:
+  - redirects:
+      redirect_maps:
+        'btt-ebb/index.md' : '3d-printing/klipper/canbus/btt/ebb/index.md'
+        'btt-ebb/canboot.md' : '3d-printing/klipper/canbus/btt/ebb/canboot.md'
+        'btt-ebb/klipper.md' : '3d-printing/klipper/canbus/btt/ebb/klipper.md'
+        'btt-u2c-v1.x/index.md' : '3d-printing/klipper/canbus/btt/u2c-v1.x/index.md'
+        'btt-u2c-v1.x/candlelight.md' : '3d-printing/klipper/canbus/btt/u2c-v1.x/candlelight.md'
+        'btt-u2c-v1.x/canboot.md' : '3d-printing/klipper/canbus/btt/u2c-v1.x/canboot.md'
+        'btt-u2c-v1.x/klipper-usb-to-can.md' : '3d-printing/klipper/canbus/btt/u2c-v1.x/klipper-usb-to-can.md'
+        'btt-u2c-v2.x/index.md' : '3d-printing/klipper/canbus/btt/u2c-v2.x/index.md'
+        'btt-u2c-v2.x/candlelight.md' : '3d-printing/klipper/canbus/btt/u2c-v2.x/candlelight.md'
+        'btt-u2c-v2.x/canboot.md' : '3d-printing/klipper/canbus/btt/u2c-v2.x/canboot.md'
+        'btt-u2c-v2.x/klipper-usb-to-can.md' : '3d-printing/klipper/canbus/btt/u2c-v2.x/klipper-usb-to-can.md'
   - search
 
 # add some markdown extensions
@@ -82,30 +95,35 @@ markdown_extensions:
 # full navigation structure
 nav:
   - Home: index.md
+
   - CANBUS Guides:
-    - BigTreeTech EBB:
-        - Overview: btt-ebb/index.md
-        - CanBoot (optional): btt-ebb/canboot.md
-        - Klipper: btt-ebb/klipper.md
-    - BigTreeTech Pi + U2C: btt-pi-u2c/index.md
-    - BigTreeTech U2C v1.x:
-      - Overview: btt-u2c-v1.x/index.md
-      - Candlelight: btt-u2c-v1.x/candlelight.md
-      - CanBoot (optional): btt-u2c-v1.x/canboot.md
-      - Klipper USB-to-CAN: btt-u2c-v1.x/klipper-usb-to-can.md
-    - BigTreeTech U2C v2.x:
-      - Overview: btt-u2c-v2.x/index.md
-      - Candlelight: btt-u2c-v2.x/candlelight.md
-      - CanBoot (optional): btt-u2c-v2.x/canboot.md
-      - Klipper USB-to-CAN: btt-u2c-v2.x/klipper-usb-to-can.md
-    - Mellow Fly SHT v1:
-      - Overview: mellow-fly-sht-v1/index.md
-      - CanBoot (optional): mellow-fly-sht-v1/canboot.md
-      - Klipper: mellow-fly-sht-v1/klipper.md
+    - BigTreeTech:
+      - EBB series <i>(STM32)</i>:
+        - Overview: 3d-printing/klipper/canbus/btt/ebb/index.md
+        - CanBoot <i>(optional)</i>: 3d-printing/klipper/canbus/btt/ebb/canboot.md
+        - Klipper: 3d-printing/klipper/canbus/btt/ebb/klipper.md
+      - U2C Module (for BTT Pi v1.2): 3d-printing/klipper/canbus/btt/u2c-module/index.md
+      - U2C v1.x:
+        - Overview: 3d-printing/klipper/canbus/btt/u2c-v1.x/index.md
+        - Candlelight: 3d-printing/klipper/canbus/btt/u2c-v1.x/candlelight.md
+        - CanBoot <i>(optional)</i>: 3d-printing/klipper/canbus/btt/u2c-v1.x/canboot.md
+        - Klipper USB-to-CAN: 3d-printing/klipper/canbus/btt/u2c-v1.x/klipper-usb-to-can.md
+      - U2C v2.x:
+        - Overview: 3d-printing/klipper/canbus/btt/u2c-v2.x/index.md
+        - Candlelight: 3d-printing/klipper/canbus/btt/u2c-v2.x/candlelight.md
+        - CanBoot <i>(optional)</i>: 3d-printing/klipper/canbus/btt/u2c-v2.x/canboot.md
+        - Klipper USB-to-CAN: 3d-printing/klipper/canbus/btt/u2c-v2.x/klipper-usb-to-can.md
+    - Mellow:
+      - Fly SHT v1:
+        - Overview: 3d-printing/klipper/canbus/mellow/fly-sht-v1/index.md
+        - CanBoot <i>(optional)</i>: 3d-printing/klipper/canbus/mellow/fly-sht-v1/canboot.md
+        - Klipper: 3d-printing/klipper/canbus/mellow/fly-sht-v1/klipper.md
+
   - Klipper Tutorials:
-    - PA-Calibration with LA-Test: pa-calibration-la-test/index.md
+    - PA-Calibration with LA-Test: 3d-printing/klipper/pa-calibration-la-test/index.md
     - SSD1306 Display:
-      - Overview: ssd1306-display/index.md
-      - RPi with Host-MCU: ssd1306-display/rpi-host-mcu.md
+      - Overview: 3d-printing/klipper/ssd1306-display/index.md
+      - RPi with Host-MCU: 3d-printing/klipper/ssd1306-display/rpi-host-mcu.md
+
   - Other Tutorials:
-    - Snakeoil Certificates: snakeoil-certificates/index.md
+    - Snakeoil Certificates: other/snakeoil-certificates/index.md
