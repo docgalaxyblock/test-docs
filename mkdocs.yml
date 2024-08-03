@@ -1,19 +1,48 @@
-site_name: Klipper Misc Docs
+site_name: Misc Docs
+site_url: https://docs.meteyou.wtf/
+site_author: Stefan Dej (meteyou)
+
+repo_name: meteyou/docs
+repo_url: https://github.com/meteyou/docs
+
+# add copyright to the footer
+copyright: |
+  &copy; 2024 <a href="https://github.com/meteyou"  target="_blank" rel="noopener">Stefan Dej (meteyou)</a>
+
+# add some social media buttons to the footer
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/meteyou
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@meteyou
+    - icon: fontawesome/brands/twitter
+      link: https://x.com/meteyou
+
 theme:
   name: material
-  features:
-    - content.code.copy
-    - navigation.sections
+  locale: en
   icon:
     logo: material/printer-3d
     repo: fontawesome/brands/github
-  language: en
-  plugins:
-    - navigation.indexes
-    - search
+  features:
     - content.code.copy
+    - content.tabs.link
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
   palette:
-
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -21,18 +50,34 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: teal
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to system preference
 
-# add repo to mkdocs
-repo_name: meteyou/docs
-repo_url: https://github.com/meteyou/docs
+# add some plugins
+plugins:
+  - search
+
+# add some markdown extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 # full navigation structure
 nav:
@@ -64,31 +109,3 @@ nav:
       - RPi with Host-MCU: ssd1306-display/rpi-host-mcu.md
   - Other Tutorials:
     - Snakeoil Certificates: snakeoil-certificates/index.md
-
-# add some markdown extensions
-markdown_extensions:
-  - admonition
-  - attr_list
-  - md_in_html
-  - pymdownx.details
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-
-# add some social media buttons to the footer
-extra:
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/meteyou
-    - icon: fontawesome/brands/mastodon
-      link: https://fosstodon.org/@meteyou
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/meteyou
-
-# add copyright to the footer
-copyright: |
-  &copy; 2023 <a href="https://github.com/meteyou"  target="_blank" rel="noopener">Stefan Dej (meteyou)</a>
