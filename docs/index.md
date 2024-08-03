@@ -1,4 +1,10 @@
-# Welcome my Klipper Misc Docs
+---
+hide:
+  - navigation
+  - toc
+---
+
+# Welcome my Misc Docs
 
 In this Documentation, you will find a comprehensive guide on setting up CAN devices with Klipper. Klipper is a powerful
 open-source firmware that allows you to optimize and expand your 3D printer setups.
